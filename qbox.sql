@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `players` (
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 ALTER TABLE `players`
-ADD IF NOT EXISTS `last_logged_out` timestamp NULL DEFAULT NULL AFTER `last_updated`,
+ADD `last_logged_out` timestamp NULL DEFAULT NULL AFTER `last_updated`,
 MODIFY COLUMN `citizenid` varchar(50) NOT NULL COLLATE utf8mb4_unicode_ci;
 
 CREATE TABLE IF NOT EXISTS `playerskins` (
