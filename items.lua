@@ -208,8 +208,30 @@ return {
     ['radio'] = {
         label = 'Radio',
         weight = 1000,
-        stack = false,
-        allowArmed = true
+        allowArmed = true,
+        consume = 0,
+        client = {
+            event = 'mm_radio:client:use'
+        }
+    },
+
+    ['jammer'] = {
+        label = 'Radio Jammer',
+        weight = 10000,
+        allowArmed = true,
+        client = {
+            event = 'mm_radio:client:usejammer'
+        }
+    },
+
+    ['radiocell'] = {
+        label = 'AAA Cells',
+        weight = 1000,
+        stack = true,
+        allowArmed = true,
+        client = {
+            event = 'mm_radio:client:recharge'
+        }
     },
 
     ['advancedlockpick'] = {
@@ -442,7 +464,7 @@ return {
         weight = 100,
     },
 
-    ['aluminium'] = {
+    ['aluminum'] = {
         label = 'Aluminium',
         weight = 100,
     },
@@ -563,12 +585,12 @@ return {
     },
 
     ['beer'] = {
-        label = 'beer',
+        label = 'Beer',
         weight = 200,
     },
 
     ['sandwich'] = {
-        label = 'beer',
+        label = 'Sandwich',
         weight = 200,
     },
 
